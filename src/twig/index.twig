@@ -8,7 +8,7 @@
 
 		<meta property="og:title" content="{{ name }}">
 		<meta property="og:type" content="profile">
-		<meta property="og:url" content="">
+		<meta property="og:url" content="//nhall.github.io/">
 		<meta property="og:image" content="//nhall.github.io/images/og.png">
 
 		<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
@@ -233,7 +233,7 @@
 						<ul class="connect_list" aria-labelledby="connect_title">
 							{% for link in links %}
 							<li class="connect_item">
-								<a class="connect_link" href="{{ link.url }}" target="_blank">
+								<a class="connect_link" href="{{ link.url }}" target="_blank" rel="noopener">
 									<span class="connect_link_label">{{ link.name }}</span>
 								</a>
 							</li>
