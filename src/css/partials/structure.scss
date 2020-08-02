@@ -62,14 +62,16 @@ body {
 .header {
 	@include landmark_padding;
 
-	margin: 20px 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
 
 	@media #{$min_xl} {
 		margin-bottom: 40px;
 	}
 
 	@media print {
-		margin: 0 0 30px;
+		margin-top: 0;
+		margin-bottom: 30px;
 	}
 }
 
