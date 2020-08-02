@@ -1,0 +1,188 @@
+/* ==========================================================================
+	Structure
+============================================================================= */
+
+html {}
+
+body {
+	color: $gray_dark;
+	background-color: #F5F8FA;
+
+	@media (prefers-color-scheme: dark) {
+		color: #fff;
+		background-color: #1E1E1E;
+	}
+
+	@media print {
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+::selection {
+	background-color: rgba($blue, 0.2);
+
+	@media (prefers-color-scheme: dark) {
+		background-color: rgba($pink, 0.4);
+	}
+}
+
+.resume {
+	@include body_text;
+
+	--accent: #{$blue};
+
+	font-size: 16px;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+
+	@media (prefers-color-scheme: dark) {
+		--accent: #{$pink};
+	}
+}
+
+.page {
+	@include landmark_padding;
+
+	margin-bottom: 80px;
+
+	a {
+		@include page_link;
+	}
+}
+
+[tabindex="-1"] {
+	outline: none;
+}
+
+
+/* Header
+============================================================================= */
+
+.header {
+	@include landmark_padding;
+
+	margin: 20px 0;
+
+	@media #{$min_xl} {
+		margin-bottom: 40px;
+	}
+
+	@media print {
+		margin: 0 0 30px;
+	}
+}
+
+.header_title {
+	@include h1;
+
+	margin: 0;
+
+	@media print {
+		font-size: 20px;
+	}
+}
+
+.header_meta {
+
+	@media screen {
+		display: none;
+	}
+
+	a {
+		@include page_link;
+	}
+}
+
+.header_meta_phone {
+	margin: 0;
+}
+
+.header_meta_phone_link {}
+
+.header_meta_email {
+	margin: 0;
+}
+
+.header_meta_email_link {}
+
+
+/* Footer
+============================================================================= */
+
+.footer {
+	position: relative;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@media print {
+		display: none;
+	}
+
+	&::before {
+		height: 1px;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+
+		background-color: currentColor;
+		content: "";
+		opacity: 0.1;
+		pointer-events: none;
+	}
+}
+
+.footer_inner {
+	@include landmark_padding;
+}
+
+.connect {
+	align-items: center;
+	display: flex;
+}
+
+.connect_title {
+	@include body_text;
+
+	font-weight: normal;
+	margin: 0 20px 0 0;
+}
+
+.connect_list {
+	@include remove_list;
+
+	display: flex;
+}
+
+.connect_item {}
+
+.connect_link {
+	color: var(--accent);
+	display: block;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition:
+		box-shadow $base_speed,
+		color $base_speed;
+
+	&:hover,
+	&:focus {
+		color: inherit
+	}
+
+	&:first-child {
+		margin-left: -20px;
+	}
+}
+
+.connect_link_label {
+	box-shadow: 0 1px 0 var(--accent);
+
+	.connect_link:hover &,
+	.connect_link:focus & {
+		box-shadow: 0 1px 0 currentColor;
+	}
+}

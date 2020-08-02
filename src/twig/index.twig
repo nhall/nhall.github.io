@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ name }}'s Professional Resume</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta property="og:title" content="{{ name }}">
+		<meta property="og:type" content="profile">
+		<meta property="og:url" content="">
+		<meta property="og:image" content="images/og.png">
+
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="apple-touch-icon" href="icon.png">
+
+		<meta name="theme-color" content="#fafafa">
+	</head>
+	<body>
+
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Person",
+				"@id": "#nick",
+				"name": "{{ name }}",
+				"email": "{{ email }}",
+				"telephone": "{{ phone }}",
+				"image": "",
+				"jobTitle": "Senior Developer",
+				"description": "Hi, I am a front-end web developer living in Baltimore, Maryland.",
+				"contactPoint": [
+					{
+						"@type": "ContactPoint",
+						"contactType": "LinkedIn",
+						"identifier": "nhall",
+						"image": "//media-exp1.licdn.com/dms/image/C5103AQEwHsz4_MyGLQ/profile-displayphoto-shrink_400_400/0?e=1601510400&v=beta&t=QRDaFyT6xAU12ez5zuOcYpb1IarV0t8Dz6FTC2pLqKc",
+						"url": "//www.linkedin.com/in/nhall/"
+					},
+					{
+						"@type": "ContactPoint",
+						"contactType": "GitHub",
+						"identifier": "nhall",
+						"image": "//avatars1.githubusercontent.com/u/1731046?s=460&v=4",
+						"url": "//github.com/nhall"
+					}
+				],
+				"hasCredential": [
+					{
+						"@type": "EducationalOccupationalCredential",
+						"credentialCategory": "degree",
+						"educationalLevel": "Bachelors of Science",
+						"dateCreated": "2004-05",
+						"recognizedBy": {
+							"@type": "CollegeOrUniversity",
+							"name": "Towson University",
+							"sameAs": "//www.towson.edu/"
+						}
+					}
+				],
+				"hasOccupation": {
+					"@type": "EmployeeRole",
+					"roleName": "Senior Developer",
+					"startDate": "2014-09"
+				},
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Fastspot"
+				},
+				"alumniOf": [
+					{
+						"@type": "Organization",
+						"name": "Finalsite",
+						"sameAs": "//www.finalsite.com/",
+						"employee": {
+							"@type": "Person",
+							"hasOccupation": {
+								"@type": "EmployeeRole",
+								"roleName": "Web Production Manager",
+								"startDate": "2012-08",
+								"endDate": "2014-09"
+							},
+							"sameAs": "#nick"
+						}
+					},
+					{
+						"@type": "Organization",
+						"name": "Silverpoint (now Finalsite)",
+						"sameAs": "//www.finalsite.com/",
+						"employee": {
+							"@type": "Person",
+							"hasOccupation": {
+								"@type": "EmployeeRole",
+								"roleName": "Web Producer",
+								"startDate": "2008-06",
+								"endDate": "2012-08"
+							},
+							"sameAs": "#nick"
+						}
+					},
+					{
+						"@type": "Organization",
+						"name": "G1440",
+						"sameAs": "//www.g1440.com/",
+						"employee": {
+							"@type": "Person",
+							"hasOccupation": {
+								"@type": "EmployeeRole",
+								"roleName": "Web Designer",
+								"startDate": "2004-06",
+								"endDate": "2008-06"
+							},
+							"sameAs": "#nick"
+						}
+					}
+				]
+			}
+		</script>
+
+		<div class="resume">
+			<header class="header">
+				<h1 class="header_title">{{ name }}</h1>
+				<div class="header_meta">
+					<p class="header_meta_phone">
+						<a class="header_meta_phone_link" href="tel:{{ phone }}">{{ phone }}</a>
+					</p>
+					<p class="header_meta_email">
+						<a class="header_meta_email_link" href="mailto:{{ email }}">{{ email }}</a>
+					</p>
+				</div>
+			</header>
+			<main class="page">
+				<section class="jobs">
+					<h2 class="jobs_title" id="jobs_title">
+						<span class="jobs_title_label">Experience</span>
+					</h2>
+					<ul class="jobs_list" aria-labelledby="jobs_title">
+						{% for job in jobs %}
+						<li class="job">
+							<div class="job_inner">
+								<div class="job_header">
+									<h3 class="job_title" id="job_title_{{ loop.index }}">
+										<span class="job_title_position">{{ job.position }},</span>
+										<span class="job_title_company">{{ job.company }}</span>
+									</h3>
+									<p class="job_location">{{ job.location }}</p>
+									<p class="job_time">{{ job.time }}</p>
+								</div>
+								<div class="job_body">
+									<ul class="job_highlights" aria-labelledby="job_title_{{ loop.index }}">
+										{% for point in job.points %}
+										<li class="job_highlight">{{ point }}</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</section>
+				<section class="schools">
+					<h2 class="schools_title" id="schools_title">
+						<span class="schools_title_label">Education</span>
+					</h2>
+					<div class="school">
+						<div class="school_header">
+							<h3 class="school_name" id="school_name">{{ education.name }}</h3>
+							<p class="school_location">{{ education.location }}</p>
+							<p class="school_time">{{ education.time }}</p>
+						</div>
+						<div class="school_body">
+							<p class="school_highlights">{{ education.degree }} <br>
+							{{ education.major }} <br>
+							{% for point in education.points %}
+							<em>{{ point }}</em>
+							{% endfor %}
+						</div>
+					</div>
+				</section>
+				<section class="certifications">
+					<h2 class="certifications_title">
+						<span class="certifications_title_label">Certifications</span>
+					</h2>
+					<p class="certificate">{{ certifications }}</p>
+				</section>
+				<section class="skills">
+					<h2 class="skills_title">
+						<span class="skills_title_label">Personal Skills</span>
+					</h2>
+					<p class="skill">{{ skills }}</p>
+				</section>
+				<section class="achievements">
+					<h2 class="achievements_title" id="achievements_title">
+						<span class="achievements_title_label">Awards</span>
+					</h2>
+					<ul class="achievements_list" aria-labelledby="achievements_title">
+						{% for achievement in achievements %}
+						<li class="achievement">
+							<div class="achievement_inner">
+								<div class="achievement_header">
+									<h3 class="achievement_site" id="achievements_site_{{ loop.index }}">
+										<a class="achievement_link" href="{{ achievement.url }}" target="_blank" rel="noopener">{{ achievement.site }}</a>
+									</h3>
+								</div>
+								<ul class="awards" aria-labelledby="achievements_site_{{ loop.index }} achievements_title">
+									{% for award in achievement.awards %}
+									<li class="award">{{ award }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</section>
+				<section class="references">
+					<h2 class="references_title">
+						<span class="references_title_label">References</span>
+					</h2>
+					<p class="reference">{{ references }}</p>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer_inner">
+					<div class="connect">
+						<h2 class="connect_title" id="connect_title">Connect with me:</h2>
+						<ul class="connect_list" aria-labelledby="connect_title">
+							{% for link in links %}
+							<li class="connect_item">
+								<a class="connect_link" href="{{ link.url }}" target="_blank" rel="noopener">
+									<span class="connect_link_label">{{ link.name }}</span>
+								</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<link rel="stylesheet" href="css/site.css">
+
+		<script>
+			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+			ga('create', 'UA-173943755-1', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+		</script>
+		<script src="//www.google-analytics.com/analytics.js" async></script>
+	</body>
+</html>

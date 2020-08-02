@@ -1,0 +1,285 @@
+/* ==========================================================================
+	Components
+============================================================================= */
+
+/* Jobs
+============================================================================= */
+
+.jobs {
+	@include component;
+}
+
+.jobs_title {
+	@include component_title;
+}
+
+.jobs_title_label {}
+
+.jobs_list {
+	@include remove_list;
+	@include component_body;
+}
+
+.job {
+	@include component_item;
+
+	&:nth-child(n + 4) {
+
+		@media print {
+			display: none;
+		}
+	}
+}
+
+.job_inner {
+	@include component_grid;
+}
+
+.job_header {
+	@include component_item_header;
+	@include component_grid_header;
+}
+
+.job_title {
+	@include component_item_title;
+}
+
+.job_title_position {
+
+	@media #{$min_md} {
+		display: block;
+	}
+
+	@media print {
+		display: inline;
+	}
+}
+
+.job_title_company {
+	white-space: nowrap;
+
+	@media #{$min_md} {
+		white-space: normal;
+	}
+}
+
+.job_location {
+	@include component_item_subtitle;
+}
+
+.job_time {
+	@include component_item_subtitle;
+}
+
+.job_body {}
+
+.job_highlights {
+	@include component_list;
+}
+
+.job_highlight {
+	@include component_list_item;
+
+	&:first-of-type {
+
+		@media #{$min_md},
+		print and (min-width: 550px) {
+
+			@supports (display: grid) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.job:last-of-type & {
+
+		&:last-of-type {
+
+			@media #{$min_md},
+			print and (min-width: 550px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+/* Schools
+============================================================================= */
+
+.schools {
+	@include component;
+}
+
+.schools_title {
+	@include component_title;
+}
+
+.school {
+	@include component_body;
+	@include component_item;
+	@include component_grid;
+}
+
+.school_header {
+	@include component_item_header;
+	@include component_grid_header;
+}
+
+.school_name {
+	@include component_item_title;
+}
+
+.school_location {
+	@include component_item_subtitle;
+}
+
+.school_time {
+	@include component_item_subtitle;
+}
+
+.school_body {}
+
+.school_degree {}
+
+.school_major {}
+
+.school_highlights {
+	margin: 0;
+}
+
+.school_highlight {}
+
+
+/* Certifications
+============================================================================= */
+
+.certifications {
+	@include component;
+}
+
+.certifications_title {
+	@include component_title;
+}
+
+.certificate {
+	@include component_body;
+	@include component_item;
+}
+
+
+/* Skills
+============================================================================= */
+
+.skills {
+	@include component;
+}
+
+.skills_title {
+	@include component_title;
+}
+
+.skill {
+	@include component_body;
+	@include component_item;
+
+
+	max-width: 90ch;
+
+	@media print {
+		max-width: none;
+	}
+}
+
+
+/* Achievements
+============================================================================= */
+
+.achievements {
+	@include component;
+
+	@media print {
+		display: none;
+	}
+}
+
+.achievements_title {
+	@include component_title;
+}
+
+.achievements_list {
+	@include remove_list;
+	@include component_body;
+}
+
+.achievement {
+	@include component_item;
+}
+
+.achievement_inner {
+	@include component_grid;
+}
+
+.achievement_header {
+	@include component_item_header;
+}
+
+.achievement_site {
+	@include component_item_title;
+
+	@media #{$min_md} {
+		font-size: 18px;
+		line-height: 1.75;
+	}
+}
+
+.achievement_link {}
+
+.awards {
+	@include component_list;
+}
+
+.award {
+	@include component_list_item;
+
+	&:first-of-type {
+
+		@media #{$min_md} {
+
+			@supports (display: grid) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.achievement:last-of-type & {
+
+		&:last-of-type {
+
+			@media #{$min_md} {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+/* References
+============================================================================= */
+
+.references {
+	@include component;
+
+	@media screen {
+		display: none;
+	}
+}
+
+.references_title {
+	@include component_title;
+}
+
+.reference {
+	@include component_body;
+	@include component_item;
+}

@@ -1,0 +1,178 @@
+{
+	"name": "Nicholas Hall",
+	"phone": "410-353-4948",
+	"email": "nickjhall@gmail.com",
+	"jobs": [
+		{
+			"position": "Senior Developer",
+			"company": "Fastspot",
+			"location": "Baltimore, Md",
+			"time": "2014-Present",
+			"points": [
+				"Created an internal codebase focused on standardizing solutions and reducing the time needed to start new projects",
+				"Interviewed, onboarded, trained and mentored new developers",
+				"Developed, documented and maintained code standards making it easier to assist, review and debug each other’s work",
+				"Defined and documented functional requirements",
+				"Worked with the product team to identify potential issues with scope, accessibility, and project timeline",
+				"Assist with both client pitches and trainings",
+				"Teamed up with design and strategy to discover creative solutions to complex problems while achieving desired user experience and sense of emotion",
+				"Led company's accessibility efforts including teaching principles, adhering to standards and guidelines, working with third-party consultants and developing an automated testing plan",
+				"Volunteered time to speak with aspiring developers at both college and high school levels"
+			]
+		},
+		{
+			"position": "Web Production Manager",
+			"company": "Finalsite (formerly Silverpoint)",
+			"location": "Baltimore, Md",
+			"time": "2012-2014",
+			"points": [
+				"Managed team of local and remote developers",
+				"Allocated department resources based on individual strengths and areas for growth",
+				"Led department with process and workflow improvements to increase efficiencies while maintaining a high quality of work",
+				"Interviewed and made hiring decisions for both interns as well as full-time employees in the development department",
+				"Conducted individual performance reviews and reported career accomplishments to higher levels of management"
+
+			]
+		},
+		{
+			"position": "Web Producer",
+			"company": "Silverpoint",
+			"location": "Baltimore, Md",
+			"time": "2008-2012",
+			"points": [
+				"Involved in all aspects of site production from design concepts to post-launch maintenance",
+				"Championed progressive enhancements to adopt advanced front-end techniques resulting in development efficiencies and a better user experience",
+				"Liaison between front-end and back-end development teams to ensure the best possible product",
+				"Participated in remote projects for accelerated project schedules (ask me about Bucharest or Honolulu)"
+			]
+		},
+		{
+			"position": "Web Designer",
+			"company": "G.1440 LLC",
+			"location": "Baltimore, Md",
+			"time": "2004-2008",
+			"points": [
+				"Primary front-end developer for complex CSS layouts",
+				"Prototyped web application with CSS, HTML, and JavaScript",
+				"Performed site maintenance with both in house and open source CMS tools",
+				"Ensured 508 & ADA compliance of new builds"
+			]
+		}
+	],
+	"education": {
+		"name": "Towson University",
+		"location": "Towson, Md",
+		"time": "2000-2004",
+		"degree": "Bachelor of Science",
+		"major": "Double Major in E-Business and Marketing",
+		"points": [
+			"Graduated with magna cum laude honors"
+		]
+	},
+	"certifications": [
+		"Certified Professional in Accessibility Core Competencies <a href='https://www.accessibilityassociation.org/cpacccertification' target='_blank' rel='noopener'>(CPACC)</a>"
+	],
+	"skills": [
+		"I maintain excellent written and oral communication skills as well as understanding and listening skills. I am passionate about my work, eager to learn, and pay attention to details. I am a problem solver with a substantial disregard for the impossible."
+	],
+	"achievements": [
+		{
+			"site": "Maryland Institute College of Art",
+			"url": "https://www.mica.edu/",
+			"awards": [
+				"2019 UCDA Design Competition - Excellence - Entire Website",
+				"2019 UCDA Design Competition - Judges Choice - All Digital",
+				"Webby - Winner, School/University"
+			]
+		},
+		{
+			"site": "Nuclear Energy Institute",
+			"url": "https://www.nei.org/home",
+			"awards": [
+				"Davey Awards - Gold - Websites - Category: Associations"
+			]
+		},
+		{
+			"site": "ConocoPhillips",
+			"url": "http://www.conocophillips.com/",
+			"awards": [
+				"Communicator Awards - Websites - General Home Page - Excellence",
+				"Davey Awards - Gold - Websites - Category: Energy"
+			]
+		},
+		{
+			"site": "Cornell Tech",
+			"url": "https://www.tech.cornell.edu/",
+			"awards": [
+				"Educational Advertising Awards - Websites - Merit",
+				"Webby - Official Honoree, School/University"
+			]
+		},
+		{
+			"site": "Hamilton College",
+			"url": "https://www.hamilton.edu/",
+			"awards": [
+				"CASE Gold Award, Institutional Websites",
+				"Webby - Official Honoree, School/University"
+			]
+		},
+		{
+			"site": "Thomas Jefferson's Monticello",
+			"url": "https://www.monticello.org/",
+			"awards": [
+				"Davey Awards Silver for Feature Categories-Best Home Page",
+				"W3 Awards Gold for Website Features-Home Page"
+			]
+		},
+		{
+			"site": "Ford's Theatre",
+			"url": "https://www.fords.org/",
+			"awards": [
+				"W3 Awards Silver for Websites-Cultural Institutions"
+			]
+		},
+		{
+			"site": "Yale University",
+			"url": "https://www.yale.edu/",
+			"awards": [
+				"W3 Awards Gold for Websites in Website Features-Home Page",
+				"Webby - Official Honoree, School/University Mobile"
+			]
+		},
+		{
+			"site": "Rosalind Franklin University",
+			"url": "https://www.rosalindfranklin.edu/",
+			"awards": [
+				"W3 Awards Gold for Websites in Website Features-User Interface"
+			]
+		},
+		{
+			"site": "Connecticut College",
+			"url": "https://www.conncoll.edu/",
+			"awards": [
+				"W3 Awards - Schools/Universities, Silver"
+			]
+		},
+		{
+			"site": "University of San Francisco",
+			"url": "https://www.usfca.edu/",
+			"awards": [
+				"Davey Awards Silver for Websites-Schools/University",
+				"W3 Awards - Schools/Universities, Silver"
+			]
+		}
+	],
+	"references": [
+		"Available upon request."
+	],
+	"links": [
+		{
+			"name": "GitHub",
+			"url": "https://github.com/nhall"
+		},
+		{
+			"name": "LinkedIn",
+			"url": "https://www.linkedin.com/in/nhall/"
+		}
+	]
+}
