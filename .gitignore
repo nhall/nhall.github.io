@@ -1,0 +1,10 @@
+cache/
+custom/environment.php
+.DS_store
+node_cache/
+node_modules/
+package-lock.json
+pnpm-debug.log
+pnpm-lock.yaml
+shrinkwrap.yaml
+site/files/
