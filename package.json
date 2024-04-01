@@ -12,7 +12,7 @@
     "autoprefixer": "9.6.0",
     "browser-sync": "2.26.5",
     "del": "4.1.1",
-    "formstone": "1.4.13",
+    "formstone": "1.4.17",
     "globby": "9.2.0",
     "gulp": "4.0.2",
     "gulp-axe-webdriver": "^3.1.3",
