@@ -8,7 +8,7 @@
     "url": "https://github.com/nhall/resume"
   },
   "devDependencies": {
-    "async": "3.0.1",
+    "async": "3.2.2",
     "autoprefixer": "9.6.0",
     "browser-sync": "2.26.5",
     "del": "4.1.1",
