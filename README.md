@@ -1,2 +1,0 @@
-# Nicholas Hall
-Personal resume

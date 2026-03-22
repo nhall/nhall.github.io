@@ -1,0 +1,57 @@
+@use 'sass:map';
+
+// =============================================================================
+// Setup
+// =============================================================================
+
+// Fonts
+// =============================================================================
+
+@mixin sans($weight: null) {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	@if $weight != null {
+		font-weight: $weight;
+	}
+}
+
+// Colors
+// =============================================================================
+
+$ink: #1a1a1a;
+$paper: #f0ece4;
+$paper_dark: #1a1a1a;
+$ink_dark: #f0ece4;
+$accent: #0055a4;
+$accent_dark: #7eb8e0;
+
+// Misc
+// =============================================================================
+
+$base_speed: 0.3s;
+
+// Media Queries
+// =============================================================================
+
+$breakpoints: (
+	'xs': 320,
+	'sm': 500,
+	'md': 740,
+	'lg': 980,
+	'xl': 1220,
+	'xxl': 1460
+);
+
+$mq_min_xs: map.get($breakpoints, 'xs');
+$mq_min_sm: map.get($breakpoints, 'sm');
+$mq_min_md: map.get($breakpoints, 'md');
+$mq_min_lg: map.get($breakpoints, 'lg');
+$mq_min_xl: map.get($breakpoints, 'xl');
+$mq_min_xxl: map.get($breakpoints, 'xxl');
+
+$min_xs: '(min-width:' + ($mq_min_xs * 1px) + ')';
+$min_sm: '(min-width:' + ($mq_min_sm * 1px) + ')';
+$min_md: '(min-width:' + ($mq_min_md * 1px) + ')';
+$min_lg: '(min-width:' + ($mq_min_lg * 1px) + ')';
+$min_xl: '(min-width:' + ($mq_min_xl * 1px) + ')';
+$min_xxl: '(min-width:' + ($mq_min_xxl * 1px) + ')';

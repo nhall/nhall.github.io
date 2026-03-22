@@ -1,0 +1,26 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'setup' as var;
+
+// =============================================================================
+// Functions
+// =============================================================================
+
+// prettier-ignore
+@function base_clamp(
+	$min,
+	$max,
+	$min_container_width: var.$mq_min_sm * 1px,
+	$max_container_width: var.$mq_min_xl * 1px,
+	$unit: 'vw'
+) {
+	$slope: math.div(($max - $min), ($max_container_width - $min_container_width));
+	$y_intersection: ((-1 * $min_container_width) * $slope) + $min;
+
+	@if math.is-unitless($min) {
+		$slope_num: $slope * 1px;
+		@return clamp( #{$min}, calc(#{$y_intersection} + (#{$slope_num * 100}vw / 1px)), #{$max} );
+	}
+
+	@return clamp($min, $y_intersection + (#{$slope * 100}#{$unit}), $max);
+}

@@ -1,0 +1,57 @@
+@use '../base/setup' as *;
+@use '../base/mixins' as *;
+@use '../base/functions' as *;
+
+/* ==========================================================================
+	Structure
+============================================================================= */
+
+html {
+	block-size: 100%;
+}
+
+body {
+	--ink: #{$ink};
+	--paper: #{$paper};
+	--accent: #{$accent};
+
+	block-size: 100%;
+	margin: 0;
+
+	color: var(--ink);
+	background-color: var(--paper);
+
+	@media (prefers-color-scheme: dark) {
+		--ink: #{$ink_dark};
+		--paper: #{$paper_dark};
+		--accent: #{$accent_dark};
+	}
+
+	@media (prefers-contrast: more) {
+		--ink: #000;
+		--paper: #fff;
+	}
+
+	@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+		--ink: #fff;
+		--paper: #000;
+	}
+
+	@media print {
+		--ink: #000;
+		--paper: #fff;
+	}
+}
+
+::selection {
+	background-color: color-mix(in srgb, var(--accent), transparent 75%);
+
+	@media (prefers-contrast: more) {
+		background-color: color-mix(in srgb, var(--accent), transparent 50%);
+	}
+
+	@media (prefers-reduced-transparency) {
+		background-color: var(--accent);
+		color: var(--paper);
+	}
+}

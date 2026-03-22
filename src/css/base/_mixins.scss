@@ -1,0 +1,66 @@
+@use 'setup' as *;
+@use 'functions' as *;
+
+// =============================================================================
+// Mixins
+// =============================================================================
+
+@mixin remove_list {
+	list-style: '';
+	margin-block: 0;
+	padding-inline-start: 0;
+}
+
+@mixin visually_unhide() {
+	inline-size: auto;
+	block-size: auto;
+
+	position: static;
+
+	clip: auto;
+	margin: 0;
+	overflow: visible;
+}
+
+@mixin visually_hide() {
+	inline-size: 1px;
+	block-size: 1px;
+
+	position: absolute;
+
+	border: 0;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+
+	&.focusable:active,
+	&.focusable:focus {
+		@include visually_unhide();
+	}
+}
+
+@mixin no_motion {
+	@media (prefers-reduced-motion: reduce) {
+		opacity: 1;
+		transform: none;
+		animation: none;
+	}
+}
+
+/* Utility
+============================================================================= */
+
+@mixin hover($focus: true) {
+	@if $focus {
+		&:focus-visible {
+			@content;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}

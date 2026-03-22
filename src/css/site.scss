@@ -2,8 +2,6 @@
 // Imports
 // =============================================================================
 
-@import "../../node_modules/normalize.css/normalize";
-@import "base/setup";
-@import "base/mixins";
-@import "layouts/*";
-@import "partials/*";
+@use "../../node_modules/normalize.css/normalize";
+@use "partials/structure";
+@use "partials/splash";
