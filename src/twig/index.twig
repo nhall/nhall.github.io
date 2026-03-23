@@ -26,7 +26,7 @@
 				"jobTitle": "{{ title }}",
 				"description": "{{ intro }}",
 				"url": "https://nhall.github.io/",
-				"sameAs": [{% set comma = false %}{% for link in links %}{% if link.name != 'Resume' %}{% if comma %},{% endif %}"{{ link.url }}"{% set comma = true %}{% endif %}{% endfor %}]
+				"sameAs": {{ sameAs }}
 			}
 		</script>
 

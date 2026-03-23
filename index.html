@@ -1,97 +1,125 @@
 <!doctype html>
 <html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>Nicholas Hall — Front-End Developer</title>
+		<meta
+			name="description"
+			content="Hi, I'm Nick. I build things digitally and physically, and I care deeply about making them inclusive."
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-	<meta charset="utf-8">
-	<title>Nicholas Hall — Front-End Developer</title>
-	<meta name="description" content="Hi, I'm Nick. I build things digitally and physically, and I care deeply about making them inclusive.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Nicholas Hall — Front-End Developer">
-	<meta property="og:type" content="profile">
-	<meta property="og:description" content="Hi, I'm Nick. I build things digitally and physically, and I care deeply about making them inclusive.">
-	<meta property="og:url" content="https://nhall.github.io/">
-	<meta name="theme-color" content="#f0ece4" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
-	<link rel="stylesheet" href="css/site.css">
-</head>
+		<meta property="og:title" content="Nicholas Hall — Front-End Developer" />
+		<meta property="og:type" content="profile" />
+		<meta
+			property="og:description"
+			content="Hi, I'm Nick. I build things digitally and physically, and I care deeply about making them inclusive."
+		/>
+		<meta property="og:url" content="https://nhall.github.io/" />
 
-<body>
-	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "Person",
-			"name": "Nicholas Hall",
-			"alternateName": "Nick Hall",
-			"jobTitle": "Front-End Developer",
-			"description": "Hi, I'm Nick. I build things digitally and physically, and I care deeply about making them inclusive.",
-			"url": "https://nhall.github.io/",
-			"sameAs": ["https://github.com/nhall", "https://www.linkedin.com/in/nhall/"]
-		}
-	</script>
-	<div class="splash">
-		<div class="splash_grain" aria-hidden="true"></div>
-		<a class="skip_link focusable" href="#nav">Skip to navigation</a>
-		<main class="main">
-			<h1 class="main_name">Nicholas Hall</h1>
-			<p class="main_description">Hi, I'm Nick. I build things digitally and physically, and I care deeply about making them inclusive.</p>
-			<nav class="nav" id="nav" aria-label="Social links">
-				<h2 class="nav_title">Connect</h2>
-				<ul class="nav_list">
-					<li class="nav_item">
-						<a class="nav_link" href="https://github.com/nhall" target="_blank" rel="noopener nofollow noreferrer">GitHub</a>
-					</li>
-					<li class="nav_item">
-						<a class="nav_link" href="https://www.linkedin.com/in/nhall/" target="_blank" rel="noopener nofollow noreferrer">LinkedIn</a>
-					</li>
-					<li class="nav_item">
-						<a class="nav_link" href="https://nhall.github.io/resume/">Resume</a>
-					</li>
-				</ul>
-			</nav>
-		</main>
-		<button class="animation_toggle" type="button" aria-pressed="true" aria-label="Background animation">
-			<svg class="animation_toggle_icon animation_toggle_icon--pause" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-				<rect x="6" y="4" width="4" height="16" />
-				<rect x="14" y="4" width="4" height="16" /></svg>
-			<svg class="animation_toggle_icon animation_toggle_icon--play" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-				<polygon points="6,4 20,12 6,20" /></svg>
-		</button>
-	</div>
-	<script>
-		(function() {
-			var btn = document.querySelector('.animation_toggle');
-			var splash = document.querySelector('.splash');
-			var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-			function pause() {
-				splash.classList.add('splash--paused');
-				btn.setAttribute('aria-pressed', 'false');
+		<meta name="theme-color" content="#f0ece4" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+		<link rel="stylesheet" href="css/site.css" />
+	</head>
+	<body>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Nicholas Hall",
+				"alternateName": "Nick Hall",
+				"jobTitle": "Front-End Developer",
+				"description": "Hi, I'm Nick. I build things digitally and physically, and I care deeply about making them inclusive.",
+				"url": "https://nhall.github.io/",
+				"sameAs": ["https://github.com/nhall", "https://www.linkedin.com/in/nhall/"]
 			}
+		</script>
 
-			function play() {
-				splash.classList.remove('splash--paused');
-				btn.setAttribute('aria-pressed', 'true');
-			}
-			if (prefersReducedMotion.matches) {
-				pause();
-			}
-			prefersReducedMotion.addEventListener('change', function(e) {
-				if (e.matches) {
-					pause();
-				} else {
-					play();
+		<div class="splash">
+			<div class="splash_grain" aria-hidden="true"></div>
+			<a class="skip_link focusable" href="#nav">Skip to navigation</a>
+			<main class="main">
+				<h1 class="main_name">Nicholas Hall</h1>
+				<p class="main_description">
+					Hi, I'm Nick. I build things digitally and physically, and I care deeply about making them inclusive.
+				</p>
+				<nav class="nav" id="nav" aria-label="Social links">
+					<h2 class="nav_title">Connect</h2>
+					<ul class="nav_list">
+						<li class="nav_item">
+							<a class="nav_link" href="https://github.com/nhall" target="_blank" rel="noopener nofollow noreferrer">GitHub</a>
+						</li>
+
+						<li class="nav_item">
+							<a class="nav_link" href="https://www.linkedin.com/in/nhall/" target="_blank" rel="noopener nofollow noreferrer"
+								>LinkedIn</a
+							>
+						</li>
+
+						<li class="nav_item">
+							<a class="nav_link" href="https://nhall.github.io/resume/">Resume</a>
+						</li>
+					</ul>
+				</nav>
+			</main>
+			<button class="animation_toggle" type="button" aria-pressed="true" aria-label="Background animation">
+				<svg
+					class="animation_toggle_icon animation_toggle_icon--pause"
+					aria-hidden="true"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+				>
+					<rect x="6" y="4" width="4" height="16" />
+					<rect x="14" y="4" width="4" height="16" />
+				</svg>
+				<svg
+					class="animation_toggle_icon animation_toggle_icon--play"
+					aria-hidden="true"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+				>
+					<polygon points="6,4 20,12 6,20" />
+				</svg>
+			</button>
+		</div>
+
+		<script>
+			(function () {
+				var btn = document.querySelector('.animation_toggle');
+				var splash = document.querySelector('.splash');
+				var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+				function pause() {
+					splash.classList.add('splash--paused');
+					btn.setAttribute('aria-pressed', 'false');
 				}
-			});
-			btn.addEventListener('click', function() {
-				if (splash.classList.contains('splash--paused')) {
-					play();
-				} else {
+
+				function play() {
+					splash.classList.remove('splash--paused');
+					btn.setAttribute('aria-pressed', 'true');
+				}
+
+				if (prefersReducedMotion.matches) {
 					pause();
 				}
-			});
-		})();
-	</script>
-	<script data-goatcounter="https://nhall.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</body>
 
+				prefersReducedMotion.addEventListener('change', function (e) {
+					if (e.matches) {
+						pause();
+					} else {
+						play();
+					}
+				});
+
+				btn.addEventListener('click', function () {
+					if (splash.classList.contains('splash--paused')) {
+						play();
+					} else {
+						pause();
+					}
+				});
+			})();
+		</script>
+		<script data-goatcounter="https://nhall.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+	</body>
 </html>
