@@ -1,8 +1,8 @@
 const { src, dest, series, parallel, watch } = require('gulp');
+const fs = require('fs');
 const browserSync = require('browser-sync').create();
-const del = require('del');
 const gulpif = require('gulp-if');
-const argv = require('yargs').argv;
+const argv = require('yargs/yargs')(process.argv.slice(2)).parseSync();
 const through = require('through2');
 const prettier = require('gulp-prettier').default;
 const sass = require('gulp-sass')(require('sass'));
@@ -108,8 +108,8 @@ function compileSass() {
 
 
 function clean(done) {
-	del('css');
-	del('*.html');
+	fs.rmSync('css', { recursive: true, force: true });
+	fs.readdirSync('.').filter(f => f.endsWith('.html')).forEach(f => fs.rmSync(f, { force: true }));
 	done();
 }
 
