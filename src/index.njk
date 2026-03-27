@@ -2,13 +2,13 @@
 <html lang="en-US">
 	<head>
 		<meta charset="utf-8">
-		<title>{{ name }} — {{ title }}</title>
-		<meta name="description" content="{{ intro }}">
+		<title>{{ site.name }} — {{ site.title }}</title>
+		<meta name="description" content="{{ site.intro }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta property="og:title" content="{{ name }} — {{ title }}">
+		<meta property="og:title" content="{{ site.name }} — {{ site.title }}">
 		<meta property="og:type" content="profile">
-		<meta property="og:description" content="{{ intro }}">
+		<meta property="og:description" content="{{ site.intro }}">
 		<meta property="og:url" content="https://nhall.github.io/">
 
 		<meta name="theme-color" content="#f0ece4" media="(prefers-color-scheme: light)">
@@ -21,12 +21,12 @@
 			{
 				"@context": "https://schema.org",
 				"@type": "Person",
-				"name": "{{ name }}",
+				"name": "{{ site.name }}",
 				"alternateName": "Nick Hall",
-				"jobTitle": "{{ title }}",
-				"description": "{{ intro }}",
+				"jobTitle": "{{ site.title }}",
+				"description": "{{ site.intro }}",
 				"url": "https://nhall.github.io/",
-				"sameAs": {{ sameAs }}
+				"sameAs": {{ site.links | sameAs }}
 			}
 		</script>
 
@@ -34,12 +34,12 @@
 			<div class="splash_grain" aria-hidden="true"></div>
 			<a class="skip_link focusable" href="#nav">Skip to navigation</a>
 			<main class="main">
-				<h1 class="main_name">{{ name }}</h1>
-				<p class="main_description">{{ intro }}</p>
+				<h1 class="main_name">{{ site.name }}</h1>
+				<p class="main_description">{{ site.intro }}</p>
 				<nav class="nav" id="nav" aria-label="Social links">
 					<h2 class="nav_title">Connect</h2>
 					<ul class="nav_list">
-						{% for link in links %}
+						{% for link in site.links %}
 						<li class="nav_item">
 							<a class="nav_link" href="{{ link.url }}"{% if link.name != 'Resume' %} target="_blank" rel="noopener nofollow noreferrer"{% endif %}>{{ link.name }}</a>
 						</li>
