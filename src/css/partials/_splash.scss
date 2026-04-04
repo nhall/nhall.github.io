@@ -58,117 +58,33 @@
 
 .splash::before {
 	background:
-		radial-gradient(
-			circle at 25% 55%,
-			rgba(#0077cc, 0.5) 0%,
-			rgba(#0077cc, 0.35) 15%,
-			rgba(#0077cc, 0.18) 28%,
-			rgba(#0077cc, 0.06) 40%,
-			rgba(#0077cc, 0) 55%
-		),
-		radial-gradient(
-			circle at 75% 25%,
-			rgba(#e05040, 0.4) 0%,
-			rgba(#e05040, 0.28) 14%,
-			rgba(#e05040, 0.14) 26%,
-			rgba(#e05040, 0.04) 38%,
-			rgba(#e05040, 0) 50%
-		),
-		radial-gradient(
-			circle at 45% 85%,
-			rgba(#30b080, 0.35) 0%,
-			rgba(#30b080, 0.24) 14%,
-			rgba(#30b080, 0.12) 26%,
-			rgba(#30b080, 0.03) 40%,
-			rgba(#30b080, 0) 55%
-		);
+		radial-gradient(circle at 25% 55%, rgba(#0077cc, 0.5) 0%, rgba(#0077cc, 0.35) 15%, rgba(#0077cc, 0.18) 28%, rgba(#0077cc, 0.06) 40%, rgba(#0077cc, 0) 55%),
+		radial-gradient(circle at 75% 25%, rgba(#e05040, 0.4) 0%, rgba(#e05040, 0.28) 14%, rgba(#e05040, 0.14) 26%, rgba(#e05040, 0.04) 38%, rgba(#e05040, 0) 50%),
+		radial-gradient(circle at 45% 85%, rgba(#30b080, 0.35) 0%, rgba(#30b080, 0.24) 14%, rgba(#30b080, 0.12) 26%, rgba(#30b080, 0.03) 40%, rgba(#30b080, 0) 55%);
 
 	animation: lava_a 25s ease-in-out infinite alternate;
 
 	@media (prefers-color-scheme: dark) {
 		background:
-			radial-gradient(
-				circle at 25% 55%,
-				rgba(#40a0e0, 0.45) 0%,
-				rgba(#40a0e0, 0.32) 15%,
-				rgba(#40a0e0, 0.16) 28%,
-				rgba(#40a0e0, 0.05) 40%,
-				rgba(#40a0e0, 0) 55%
-			),
-			radial-gradient(
-				circle at 75% 25%,
-				rgba(#e08060, 0.35) 0%,
-				rgba(#e08060, 0.24) 14%,
-				rgba(#e08060, 0.12) 26%,
-				rgba(#e08060, 0.03) 38%,
-				rgba(#e08060, 0) 50%
-			),
-			radial-gradient(
-				circle at 45% 85%,
-				rgba(#50d0a0, 0.3) 0%,
-				rgba(#50d0a0, 0.2) 14%,
-				rgba(#50d0a0, 0.1) 26%,
-				rgba(#50d0a0, 0.02) 40%,
-				rgba(#50d0a0, 0) 55%
-			);
+			radial-gradient(circle at 25% 55%, rgba(#40a0e0, 0.45) 0%, rgba(#40a0e0, 0.32) 15%, rgba(#40a0e0, 0.16) 28%, rgba(#40a0e0, 0.05) 40%, rgba(#40a0e0, 0) 55%),
+			radial-gradient(circle at 75% 25%, rgba(#e08060, 0.35) 0%, rgba(#e08060, 0.24) 14%, rgba(#e08060, 0.12) 26%, rgba(#e08060, 0.03) 38%, rgba(#e08060, 0) 50%),
+			radial-gradient(circle at 45% 85%, rgba(#50d0a0, 0.3) 0%, rgba(#50d0a0, 0.2) 14%, rgba(#50d0a0, 0.1) 26%, rgba(#50d0a0, 0.02) 40%, rgba(#50d0a0, 0) 55%);
 	}
 }
 
 .splash::after {
 	background:
-		radial-gradient(
-			circle at 65% 45%,
-			rgba(#9040c0, 0.4) 0%,
-			rgba(#9040c0, 0.28) 14%,
-			rgba(#9040c0, 0.14) 26%,
-			rgba(#9040c0, 0.04) 38%,
-			rgba(#9040c0, 0) 50%
-		),
-		radial-gradient(
-			circle at 15% 30%,
-			rgba(#e0a020, 0.35) 0%,
-			rgba(#e0a020, 0.24) 15%,
-			rgba(#e0a020, 0.12) 28%,
-			rgba(#e0a020, 0.03) 40%,
-			rgba(#e0a020, 0) 54%
-		),
-		radial-gradient(
-			circle at 80% 75%,
-			rgba(#0060a0, 0.35) 0%,
-			rgba(#0060a0, 0.24) 14%,
-			rgba(#0060a0, 0.12) 26%,
-			rgba(#0060a0, 0.03) 38%,
-			rgba(#0060a0, 0) 52%
-		);
+		radial-gradient(circle at 65% 45%, rgba(#9040c0, 0.4) 0%, rgba(#9040c0, 0.28) 14%, rgba(#9040c0, 0.14) 26%, rgba(#9040c0, 0.04) 38%, rgba(#9040c0, 0) 50%),
+		radial-gradient(circle at 15% 30%, rgba(#e0a020, 0.35) 0%, rgba(#e0a020, 0.24) 15%, rgba(#e0a020, 0.12) 28%, rgba(#e0a020, 0.03) 40%, rgba(#e0a020, 0) 54%),
+		radial-gradient(circle at 80% 75%, rgba(#0060a0, 0.35) 0%, rgba(#0060a0, 0.24) 14%, rgba(#0060a0, 0.12) 26%, rgba(#0060a0, 0.03) 38%, rgba(#0060a0, 0) 52%);
 
 	animation: lava_b 30s ease-in-out infinite alternate;
 
 	@media (prefers-color-scheme: dark) {
 		background:
-			radial-gradient(
-				circle at 65% 45%,
-				rgba(#b070e0, 0.35) 0%,
-				rgba(#b070e0, 0.24) 14%,
-				rgba(#b070e0, 0.12) 26%,
-				rgba(#b070e0, 0.03) 38%,
-				rgba(#b070e0, 0) 50%
-			),
-			radial-gradient(
-				circle at 15% 30%,
-				rgba(#e0c050, 0.3) 0%,
-				rgba(#e0c050, 0.2) 15%,
-				rgba(#e0c050, 0.1) 28%,
-				rgba(#e0c050, 0.02) 40%,
-				rgba(#e0c050, 0) 54%
-			),
-			radial-gradient(
-				circle at 80% 75%,
-				rgba(#4090d0, 0.3) 0%,
-				rgba(#4090d0, 0.2) 14%,
-				rgba(#4090d0, 0.1) 26%,
-				rgba(#4090d0, 0.02) 38%,
-				rgba(#4090d0, 0) 52%
-			);
+			radial-gradient(circle at 65% 45%, rgba(#b070e0, 0.35) 0%, rgba(#b070e0, 0.24) 14%, rgba(#b070e0, 0.12) 26%, rgba(#b070e0, 0.03) 38%, rgba(#b070e0, 0) 50%),
+			radial-gradient(circle at 15% 30%, rgba(#e0c050, 0.3) 0%, rgba(#e0c050, 0.2) 15%, rgba(#e0c050, 0.1) 28%, rgba(#e0c050, 0.02) 40%, rgba(#e0c050, 0) 54%),
+			radial-gradient(circle at 80% 75%, rgba(#4090d0, 0.3) 0%, rgba(#4090d0, 0.2) 14%, rgba(#4090d0, 0.1) 26%, rgba(#4090d0, 0.02) 38%, rgba(#4090d0, 0) 52%);
 	}
 }
 
@@ -336,13 +252,33 @@
 ============================================================================= */
 
 .nav {
+	background-color: rgba(#000, 0.45);
+	padding-block: 10px;
+	padding-inline: 20px;
+	border-radius: 8px;
+	width: fit-content;
+
 	opacity: 0;
 	transform: translateY(12px);
 	animation: text_reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
 
 	@include no_motion;
 
+	@media (prefers-color-scheme: light) {
+		background-color: rgba(#fff, 0.45);
+	}
+
+	@media (prefers-contrast: more) {
+		background-color: transparent;
+	}
+
+	@media (prefers-reduced-transparency) {
+		background-color: var(--paper);
+	}
+
 	@media print {
+		background-color: transparent;
+		padding: 0;
 		@include no_motion;
 	}
 }
@@ -357,7 +293,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0;
-	margin-inline-start: -20px;
 }
 
 .nav_link {
@@ -428,8 +363,6 @@
 	@media print {
 		color: inherit;
 		text-decoration: none;
-		padding-block: 0;
-		padding-inline: 0;
 		padding-inline-end: 20px;
 
 		&::after {
