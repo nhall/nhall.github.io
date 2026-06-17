@@ -17,20 +17,24 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    container:
+      image: mcr.microsoft.com/playwright:v1.58.2-noble
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version-file: .nvmrc
+          node-version: '24'
+          cache: 'npm'
 
       - run: npm ci
 
       - run: npm run build
 
-      - run: npx playwright install --with-deps chromium
-
       - run: npm test
+        env:
+          HOME: /root
 
   deploy:
     needs: test
