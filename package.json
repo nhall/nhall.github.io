@@ -33,6 +33,7 @@
 		"immutable": ">=5.1.8",
 		"linkify-it": ">=5.0.2",
 		"simple-git": ">=4.0.2",
+		"vitest": "^4.1.12",
 		"ws": ">=8.21.0"
 	},
 	"browserslist": [
